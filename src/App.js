@@ -6,7 +6,7 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <h1>Таблица пользователей</h1>
+      <h1>Таблица пользователей:</h1>
       <UserTable />
     </div>
   );
