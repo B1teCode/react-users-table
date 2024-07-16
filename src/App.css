@@ -1,5 +1,8 @@
-.App {
+.App{
   text-align: center;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 1200px;
 }
 
 .App-logo {
@@ -35,4 +38,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+.searchBar{
+  border: 1px solid black;
+  padding: 15px 24px;
+  outline: 0;
+  width: 300px;
 }
