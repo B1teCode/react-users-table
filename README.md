@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# Приложение Таблицы Пользователей
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React-приложение, отображающее таблицу пользователей, полученных с dummy API. Пользователи могут быть найдены поисковым запросом, отсортированы и просмотрены подробно через модальные окна.
 
-## Available Scripts
+## Особенности
 
-In the project directory, you can run:
+- Отображение таблицы пользователей с колонками для имени, возраста, пола, номера телефона и адреса.
+- Возможность поиска для фильтрации пользователей по имени, возрасту, полу, номеру телефона или адресу.
+- Сортировка пользователей по клику на заголовки колонок (по возрастанию и убыванию).
+- Просмотр подробной информации о пользователе в модальном окне при клике на строку таблицы.
 
-### `npm start`
+## Компоненты
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### App.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Основной компонент, отображающий структуру приложения и включающий `UserTable`.
 
-### `npm test`
+### UserTable.js
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Отвечает за:
+- Получение пользователей с `https://dummyjson.com/users` при загрузке компонента.
+- Управление состояниями пользователей, отфильтрованных пользователей, поискового запроса, выбранного пользователя и конфигурации сортировки.
+- Обработку ввода поискового запроса для динамической фильтрации пользователей.
+- Сортировку пользователей по заголовкам колонок.
+- Отображение таблицы с отсортированными и отфильтрованными пользователями.
 
-### `npm run build`
+### UserModal.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Компонент модального окна, отображающий подробную информацию о выбранном пользователе.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### SearchBar.js
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Компонент для ввода пользовательского запроса для поиска конкретных пользователей.
 
-### `npm run eject`
+## Установка
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Клонируйте репозиторий.
+2. Перейдите в директорию проекта.
+3. Установите зависимости с помощью `npm install`.
+4. Запустите приложение с помощью `npm start`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Использование
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Введите поисковый запрос в строку поиска для фильтрации пользователей.
+- Кликните по заголовкам колонок для сортировки пользователей.
+- Кликните по строке пользователя для просмотра подробной информации в модальном окне.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Используемые технологии
 
-## Learn More
+- React
+- JavaScript (ES6+)
+- CSS
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Авторы
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Dummy данные предоставлены [dummyjson.com](https://dummyjson.com).
 
-### Code Splitting
+## Лицензия
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Этот проект лицензирован по лицензии MIT - см. файл LICENSE.md для подробностей.
+--------------------------------------------------------------------------------
+# User Table Application
 
-### Analyzing the Bundle Size
+A React application that displays a table of users fetched from a dummy API. Users can be searched, sorted, and viewed in detail using modals.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Features
 
-### Making a Progressive Web App
+- Display a table of users with columns for name, age, gender, phone number, and address.
+- Search functionality to filter users based on name, age, gender, phone number, or address.
+- Sort users by clicking on column headers (ascending and descending).
+- Click on a user row to view detailed information in a modal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Components
 
-### Advanced Configuration
+### App.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The main component rendering the application structure and including the `UserTable`.
 
-### Deployment
+### UserTable.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Responsible for:
+- Fetching users from `https://dummyjson.com/users` on component mount.
+- Managing state for users, filtered users, search query, selected user, and sort configuration.
+- Handling search input to filter users dynamically.
+- Sorting users based on column headers.
+- Rendering the table with sorted and filtered users.
 
-### `npm run build` fails to minify
+### UserModal.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+A modal component that displays detailed information about a selected user.
+
+### SearchBar.js
+
+A component for user input to search for specific users based on input.
+
+## Setup
+
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Install dependencies with `npm install`.
+4. Start the application with `npm start`.
+
+## Usage
+
+- Enter search queries in the search bar to filter users.
+- Click on column headers to sort users.
+- Click on a user row to view detailed information in a modal.
+
+## Technologies Used
+
+- React
+- JavaScript (ES6+)
+- CSS
+
+## Credits
+
+- Dummy data provided by [dummyjson.com](https://dummyjson.com).
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
